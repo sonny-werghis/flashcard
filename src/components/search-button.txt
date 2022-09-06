@@ -1,0 +1,34 @@
+import React from 'react';
+import { StyleSheet, TouchableHighlight, ViewStyle } from 'react-native';
+import { SearchIcon } from '@components/svg/search-icon';
+
+type Props = {
+  onPress: () => void;
+  testID?: string;
+};
+
+export function SearchButton({ onPress, testID }: Props) {
+  return (
+    <TouchableHighlight
+      style={styles.searchButton}
+      onPress={onPress}
+      underlayColor="transparent"
+      accessibilityRole="link"
+      testID={testID}
+    >
+      <SearchIcon />
+    </TouchableHighlight>
+  );
+}
+
+type Style = {
+  searchButton: ViewStyle;
+};
+
+const styles = StyleSheet.create<Style>({
+  searchButton: {
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
+  },
+});

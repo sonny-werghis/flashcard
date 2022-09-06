@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage should match snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#dd2c00",
+      "fontSize": 20,
+      "fontWeight": undefined,
+    }
+  }
+  testID="error-message"
+>
+  A message
+</Text>
+`;

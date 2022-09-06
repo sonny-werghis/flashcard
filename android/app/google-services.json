@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82895133663",
+    "project_id": "flashcard-447c4",
+    "storage_bucket": "flashcard-447c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82895133663:android:3ba38ffb758e186374826a",
+        "android_client_info": {
+          "package_name": "com.werghis.flashcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82895133663-1pge0boagpli3cd496rri8a1ue9131fa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlDJFjpFU0XgMEQu05ALifsj2e8kZLBKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82895133663-1pge0boagpli3cd496rri8a1ue9131fa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
