@@ -1,8 +1,4 @@
 <resources>
     <string name="app_name">FlashCards</string>
-    <string name="appwidget_text">This is a test Example. Lets put some more text in this and see how much can fit in before it gets too full. This is a test Example. Lets put some more text in this and see how much can fit in before it gets too full.</string>
-    <string name="configure">Configure</string>
-    <string name="add_widget">Add widget</string>
-    <string name="app_widget_description">This is an app widget description</string>
-    <string name="card_list_error">Widget is unable to read your list of flash cards. Your card list is empty or your device is low on memory.</string>
+    <string name="app_widget_description">Flashcard widget</string>
 </resources>

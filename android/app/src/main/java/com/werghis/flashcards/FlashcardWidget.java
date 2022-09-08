@@ -7,8 +7,10 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.util.Log;
 
+import android.widget.LinearLayout;
 import android.widget.RemoteViews;
 
 import androidx.annotation.NonNull;
@@ -110,12 +112,15 @@ public class FlashcardWidget extends AppWidgetProvider {
         }
         Log.d(Constants.LOG_TAG, "Font Size: " + fontSize);
 
-        float alpha = 0.8f;
-        if ( FlashcardUtils.loadPref(Constants.PREF_TRANSPARENCY_KEY, context, appWidgetId) != null )
-            alpha = Float.parseFloat(FlashcardUtils.loadPref(Constants.PREF_TRANSPARENCY_KEY, context, appWidgetId));
+        // Set Alpha feature only works with android version S (31) or above
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            float alpha = 0.8f;
+            if ( FlashcardUtils.loadPref(Constants.PREF_TRANSPARENCY_KEY, context, appWidgetId) != null )
+                alpha = Float.parseFloat(FlashcardUtils.loadPref(Constants.PREF_TRANSPARENCY_KEY, context, appWidgetId));
 
-        views.setFloat(R.id.widget, "setAlpha", alpha/10);
-        Log.d(Constants.LOG_TAG, "Alpha: " + alpha/10);
+            views.setFloat(R.id.widget, "setAlpha", alpha/10);
+            Log.d(Constants.LOG_TAG, "Alpha: " + alpha / 10);
+        }
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

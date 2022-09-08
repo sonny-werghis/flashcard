@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, ViewStyle, TextStyle, SafeAreaView } from 'react-native';
+import { StyleSheet, View, ViewStyle, TextStyle } from 'react-native';
 import { STATUS_IDLE, STATUS_ERROR, STATUS_LOADING, STATUS } from '@constants/statuses';
 import { MainView } from '@components/main-view';
 import { Button } from '@components/button';
@@ -14,6 +14,8 @@ import { useTheme } from '@theme/use-theme';
 import { TextInput } from 'react-native-gesture-handler';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import Slider from '@react-native-community/slider';
+import { Platform } from 'react-native';
+
 
 import SInfo from "react-native-sensitive-info";
 
@@ -152,9 +154,9 @@ export function SettingsScreen() {
           innerIconStyle={{
             borderRadius: 10, // to make it a little round increase the value accordingly
           }}
-
         />
 
+        { Platform.OS == "android" && Platform.Version >=31 && 
         <Spacer marginTop={15}>
           <View style={styles.checkboxWrapper}>
             <Text fontSize={18} color="primary025" >
@@ -175,6 +177,7 @@ export function SettingsScreen() {
             onValueChange={value => onTransparencySelect(value)}
           />
         </Spacer>
+        }
 
         <Spacer marginTop={15}>
           <View style={styles.checkboxWrapper}>
@@ -210,9 +213,9 @@ type Style = {
 
 const styles = StyleSheet.create<Style>({
   view: {
-    flex: 1,
+    //flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 10,
+    paddingHorizontal: 10
   },
   email: {
     textAlign: 'center',

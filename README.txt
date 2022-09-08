@@ -1,6 +1,6 @@
 Some Notes:
 
-a) Use yarn 
+a) Use yarn or npm 
     - yarn (== npm install)
     - yarn android (== npm run android)
         - This will launch metro and emulator
